@@ -1,0 +1,39 @@
+
+
+package helloworld;
+
+
+public class HelloWorld {
+    public static void main(String[] args) {
+        
+        String iAMAString = "Hi Yall \n";
+        System.out.println(iAMAString.length());
+        System.out.println(iAMAString.toUpperCase());
+        char aCharacter = 'H';
+        int asciiValue = (int)'H';
+        System.out.println(asciiValue);
+        System.out.println(iAMAString);
+        
+        /*int twoTimesThree = 2*3;
+        final int ISZERO = 0;
+        int isTwo = 2;
+        int isThree = 3;
+        
+        // Can't do it!
+        // ISZERO = isTwo * isThree;
+        System.out.println(twoTimesThree);
+        System.out.println(isTwo*isThree);
+        
+        // COMMENTS
+        int variableName = 10;
+        double anotherVariableName = 98.6;
+        int wasADouble = (int)anotherVariableName;
+        int dropThatDecimal = (int)9.8;
+        System.out.print("HI CLASS \n");
+        System.out.println(variableName);
+        System.out.println(anotherVariableName);
+        System.out.println(wasADouble);
+        System.out.println(dropThatDecimal);*/
+    }
+    
+}
