@@ -1,0 +1,33 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package workingwithobjects;
+import TestPackage.TestClass;
+
+/**
+ *
+ * @author froschs
+ */
+public class AnatomyOfAClass {
+ 
+
+
+public static void main (String[] args){
+TestClass instance = new TestClass();
+instance.classMethod();
+println(instance.getField());
+//instance.setField("Hi");
+println(instance.getField());
+
+TestClass loadedInstance = new TestClass("WUNDERBAR");
+
+println(loadedInstance.getField());
+}
+
+public static void println(String message){
+    System.out.println(message);
+}
+}
