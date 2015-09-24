@@ -1,0 +1,42 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package TestPackage;
+
+/**
+ *
+ * @author froschs
+ */
+public class TestClass {
+    private String field = null;
+    
+    /**
+     * Constructor Takes not Params but outputs state to console
+     */
+    public TestClass(){
+        System.out.println("I Have Been Born");
+    }
+    
+    public TestClass(String str){
+        this.field = str;
+    }
+/*
+    public void setField(String field) {
+        this.field = field;
+        //field = field; also works
+    }    
+*/
+    public String getField() {
+        return field;
+    }
+    
+/**
+ * Method can be invoked
+ */
+    public void classMethod(){
+        System.out.println("I Have Been Invoked");
+    }
+}
