@@ -7,35 +7,34 @@
 package lengthwidthdemo;
 
 /**
- *
+ * Two dimensional object whose opposing sides are the same length and has right
+ * angles
  * @author froschs
  */
-public class LengthWidthDemo {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        Rectangle rect = new Rectangle();
-        System.out.println(rect.getWidth());
-        
-        Rectangle square = new Rectangle(4,4);
-        System.out.println(square.getWidth());
-        System.out.println(square.getLength());
-        
-        Area a1 = new Area(square);
-        a1.calcArea();
-        System.out.println(a1.getArea());
-        square.scale(-2);
-        System.out.println(square.getWidth());
-        System.out.println(square.getLength());
-        a1.calcArea();
-        System.out.println(a1.getArea());
-        
-        Rectangle anotherRect = new Rectangle(8,10);
-        square = anotherRect;
-        a1.calcArea();
-        System.out.println(a1.getArea());
+public class Rectangle {
+    private double length, width;
+    
+    //Default constructor
+    public Rectangle(){
+        this.length = 0.0;
+        this.width = 0.0;
     }
     
+    //Overloaded constructor with two arguments
+    public Rectangle(double length, double width){
+        this.length = length;
+        this.width = width;
+    }
+    
+    public double getLength(){ return this.length; }
+    public double getWidth() { return this.width; }
+    
+    /**
+     * Uniformly scales the size of the rectangle
+     * @param scale a factor by which the side of the rectangle will be adjusted
+     */
+    public void scale(double scale){
+        this.length += scale;
+        this.width += scale;
+    }
 }
