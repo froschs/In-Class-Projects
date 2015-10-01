@@ -1,0 +1,54 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package swing1;
+
+import javax.swing.*;
+
+/**
+ *
+ * @author froschs
+ */
+public class Swing1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) throws InterruptedException{
+        final int WINDOW_WIDTH = 350;
+        final int WINDOW_HEIGHT = 250;
+        
+        JFrame window = new JFrame(); // Created an instance of JFrame object
+        JPanel panel = new JPanel();
+        JLabel label = new JLabel("Babies first JLabel");
+        JButton button = new JButton("CHANGE PLACES!");
+        JTextField area = new JTextField(10);
+        
+        window.setTitle("A Simple Window");
+        System.out.println(window.getTitle());
+        
+        window.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+        
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        button.addActionListener(new ButtonHandler(label, area));
+        
+        panel.add(label);
+        panel.add(area);
+        panel.add(button);
+        
+        window.add(panel);
+        
+        //Thread.sleep(5*1000);
+        //window.setVisible(true);
+        //Thread.sleep(500);
+        //window.setVisible(false);
+        //Thread.sleep(200);
+        window.setVisible(true);
+        
+    }
+    
+}
