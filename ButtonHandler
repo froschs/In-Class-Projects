@@ -1,0 +1,35 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package swing1;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.*;
+
+/**
+ *
+ * @author froschs
+ */
+public class ButtonHandler implements ActionListener{
+    private JLabel label;
+    private JTextField area;
+    
+    public ButtonHandler(JLabel label, JTextField area){
+        this.area = area;
+        this.label = label;
+    }
+    
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+    String text = this.area.getText();
+    this.label.setText(text);
+    System.out.println("HEY MARTY");
+    }
+    
+}
+
+
